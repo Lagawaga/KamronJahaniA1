@@ -1,7 +1,5 @@
 package core;
 
-import com.comp3004.Card;
-
 import junit.framework.TestCase;
 
 public class CardTest extends TestCase{
