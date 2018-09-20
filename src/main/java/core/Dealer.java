@@ -3,6 +3,7 @@ package core;
 public class Dealer {
 	
 	private Deck deck;
+	//boolean stand;
 	
 	public Dealer(Deck d) {
 		deck = d;
@@ -20,8 +21,8 @@ public class Dealer {
 		deck.drawCard(incomingDeck);
 	}
 	
-	public int stand() {
-		return deck.deckTotal();
+	public boolean stand() {
+		return true;
 	}
 	
 	public boolean initialBlackJack() {
