@@ -1,8 +1,9 @@
 package core;
 
-import com.comp3004.Deck;
+import junit.framework.TestCase;
 
-public class DeckTest {
+
+public class DeckTest extends TestCase{
 	
 	public void testNewDeck(){
 		Deck deck = new Deck();
