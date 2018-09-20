@@ -13,10 +13,8 @@ public class Card {
 	public int getValue() {
 		
 		if(value == 1) {
-			return 1;
-		}
-		
-		if(value < 10) {
+			return 11;
+		}else if(value < 10) {
 			return value;
 		}else {
 			return 10;

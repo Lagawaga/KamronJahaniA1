@@ -15,9 +15,9 @@ public class CardTest extends TestCase{
 		
 	}
 	
-	public void testIsAceLow() {
+	public void testIsAceHigh() {
 		Card ace = new Card(1, 2);
-		assertEquals(1, ace.getValue());
+		assertEquals(11, ace.getValue());
 	}
 	
 
