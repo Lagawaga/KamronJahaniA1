@@ -40,15 +40,26 @@ public class PlayerTest extends TestCase{
 		Player player = new Player(new Deck());
 		player.add(new Card(1,1));
 		player.add(new Card(11,2));
-		System.out.println(player.toString());
-		System.out.println(player.deckTotal());
 		assertEquals(true, player.initialBlackJack());
 	}
 	
-	public void testNewDeck(){
+	public void testDeckTotal() {
+		Deck deck1 = new Deck();
+		deck1.newDeck();
+		deck1.shuffle();
+		Deck deck2 = new Deck();
+		deck2.addCard(deck1.getCard(0));
+		deck2.addCard(deck1.getCard(1));
+		
+		assertEquals((deck2.getCard(0).getValue()+deck2.getCard(1).getValue()), deck2.deckTotal());
+	}
+	
+	public void testPlayerBust() {
+		Player player = new Player(new Deck());
 		Deck deck = new Deck();
-		deck.newDeck();
-		assertEquals(52, deck.numCards());
+		deck.addCard(new Card(1,3));
+		deck.addCard(new Card(1,2));
+		assertEquals(true, player.playerBust());
 	}
 	
 	

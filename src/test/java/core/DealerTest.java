@@ -49,25 +49,26 @@ public class DealerTest extends TestCase{
 		Dealer dealer = new Dealer(new Deck());
 		Deck deck = new Deck();
 		deck.addCard(new Card(1,3));
-		deck.addCard(new Card(6,2));
-		assertEquals(true, dealerHit());
+		deck.addCard(new Card(4,2));
+		//System.out.println(deck.deckTotal());
+		assertEquals(true, dealer.dealerHit());
 		
 	}
 	
-	public void testDealerStand() {
+	/*public void testDealerStand() {
 		Dealer dealer = new Dealer(new Deck());
 		Deck deck = new Deck();
 		deck.addCard(new Card(1,3));
-		deck.addCard(new Card(5,2));
-		assertEquals(true, dealerStand());
-	}
+		deck.addCard(new Card(6,2));
+		assertEquals(true, dealer.dealerStand());
+	}*/
 	
 	public void testDealerBust() {
 		Dealer dealer = new Dealer(new Deck());
 		Deck deck = new Deck();
 		deck.addCard(new Card(1,3));
 		deck.addCard(new Card(1,2));
-		assertEquals(true, dealerBust());
+		assertEquals(true, dealer.dealerBust());
 	}
 	
 	
