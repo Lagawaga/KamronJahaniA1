@@ -64,7 +64,7 @@ public class DeckTest extends TestCase{
 		Deck deck = new Deck();
 		
 		deck.addCard(playingDeck.getCard(0));
-		assertEquals("DA", deck.toString());
+		assertEquals("\nDA", deck.toString());
 	}
 	
 	
