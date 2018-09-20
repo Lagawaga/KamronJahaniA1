@@ -44,7 +44,7 @@ private ArrayList<Card> deck;
 		String output = ""; 
 		
 		for(Card card : this.deck) {
-			output +=  card.toString();
+			output += "\n" + card.toString();
 		}
 		return output;
 	}
